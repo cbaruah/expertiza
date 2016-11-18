@@ -1,5 +1,7 @@
 Expertiza::Application.routes.draw do
 
+  resources :group_users
+  resources :groups
   get 'auth/:provider/callback', to: 'auth#google_login'
   get 'auth/failure', to: 'content_pages#view'
 
